@@ -1,23 +1,65 @@
 aid: bareburger
+
 name: Bareburger
-description: 'Bareburger is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://bareburger.com/wp-content/uploads/2024/02/Organic-Spicy-Sustainable-New-York-Bareburger-copy.webp
+
+description: 'Bareburger is a fast‑casual restaurant chain offering a variety of globally inspired, all‑natural burgers, salads, and sides. Founded in 2002, the brand emphasizes fresh, responsibly sourced ingredients, customizable menu options, and a commitment to sustainability. The company operates locations across the United States and internationally, providing dine‑in, takeout, and delivery services through its website and partner platforms. This profile captures Bareburger’s public-facing presence and prepares for further API documentation enrichment.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bareburger/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Restaurant
+- Fast-casual
+- Food
+- Sustainability
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bareburger-hosts.yml
+- type: Vendors
+  url: vendors/bareburger-vendors.yml
+- type: DomainSecurity
+  url: security/bareburger-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bareburger
+  url: https://bareburger.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/bareburger
+    status: 403
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
